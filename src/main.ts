@@ -1,11 +1,11 @@
 // Polyfill for graph client
+import 'cross-fetch/polyfill'
 import {Client} from '@microsoft/microsoft-graph-client'
 import {ClientCredentialsAuthProvider} from './auth'
 const core = require('@actions/core')
 const fs = require('fs')
 const path = require('path')
 const fsPromises = require('fs').promises
-;(global as any).fetch = require('node-fetch')
 const Readable = require('stream').Readable
 const fg = require('fast-glob')
 
